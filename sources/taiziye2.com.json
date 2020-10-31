@@ -1,0 +1,26 @@
+{
+    "name": "太子爷小说网",
+    "url": "www.taiziye2.com",
+    "version": 1,
+    "search": {
+        "url": "http://www.taiziye2.com/search.php?keyword=${key}&submit=%CB%D1+%CB%F7",
+        "charset": "gb2312",
+        "list": "div.list",
+        "name": "td>h3",
+        "detail": "td>h3>a@attr->href"
+    },
+    "detail": {
+        "name": "div.xiazai >h1",
+        "cover": "div.fm > img@attr->src",
+        "summary": "#jj > p",
+        "update": "div.fm>ul>li>:eq(4)"
+    },
+    "catalog": {
+        "list": "#ml>div>ol>li",
+        "name": "li",
+        "chapter": "li@attr->href"
+    },
+    "chapter": {
+        "content": "div.chapter"
+    }
+}
