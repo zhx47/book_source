@@ -28,6 +28,6 @@
     },
     "chapter": {
         "content": "div.contentbox",
-		"filter": "@strong"
+        "filter": "@strong"
     }
 }
