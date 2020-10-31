@@ -5,20 +5,22 @@
     "search": {
         "url": "http://www.taiziye2.com/search.php?keyword=${key}&submit=%CB%D1+%CB%F7",
         "charset": "gb2312",
-        "list": "div.list",
-        "name": "td>h3",
-        "detail": "td>h3>a@attr->href"
+        "list": "div.list > table",
+        "name": "td > h3",
+		"cover": "td > a >img@attr->src", 
+		"summary": "tr > td.intro",
+        "detail": "td > h3 > a@attr->href"
     },
     "detail": {
         "name": "div.xiazai >h1",
         "cover": "div.fm > img@attr->src",
         "summary": "#jj > p",
-        "update": "div.fm>ul>li>:eq(4)"
+        "update": "div.fm>ul>li:eq(4)"
     },
     "catalog": {
-        "list": "#ml>div>ol>li",
-        "name": "li",
-        "chapter": "li@attr->href"
+        "list": "#ml>div>ol",
+        "name": "#ml>div>ol>li",
+        "chapter": "#ml>div>ol>li@attr->href"
     },
     "chapter": {
         "content": "div.chapter"
