@@ -3,31 +3,32 @@
     "url": "www.damoke.cc",
     "version": 100,
     "search": {
-        "url": "https://www.damoke.cc/plus/search.php?kwtype=0&searchtype=&q={key}",
+        "url": "https://www.damoke.cc/plus/search.php?kwtype=0&searchtype=&q=${key}",
         "charset": "utf-8",
         "list": "div.container>div",
         "name": "h2>a",
         "author": "div.infos>span:eq(0)",
         "cover": "div>a>img@attr->src", 
-        "summary": "div.container>div>p",
-        "detail": "div.container>div>h2>a@attr->href"
+        "summary": "div.so>p",
+        "detail": "div.so>div.pic>a@attr->href"
     },
     "detail": {
         "name": "div.book_info>h1",
-		"author": "div.infos>span:eq(0)",
+        "author": "div.infos>span:eq(0)",
         "cover": "div.pic>img@attr->src",
         "summary": "div.book_info>p",
-		"status": "div.infos>span:eq(2)@replace->状态：->",
+        "status": "div.infos>span:eq(2)@replace->状态：->",
         "update": "div.upd",
-		"lastChapter": "div.upd>a:eq(1)"
+        "lastChapter": "div.upd>a:eq(1)"
     },
     "catalog": {
-        "list": "div.book_list>ul",
-        "name": "div.book_list>ul>li",
-        "chapter": "div.book_list>ul>li>a"
+        "list": "div.book_list>ul>li",
+        "name": "a",
+        "chapter": "a@attr->href"
     },
     "chapter": {
         "content": "div.contentbox",
-        "filter": "@strong"
+        "filter": ["@strong","@div","@font"],
+        "page": "a.next"
     }
 }
