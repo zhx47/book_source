@@ -7,9 +7,9 @@
         "charset": "utf-8",
         "list": "div.container>div",
         "name": "h2>a",
-		"author": "div.infos>span:eq(0)",
-		"cover": "div>a>img@attr->src", 
-		"summary": "div.container>div>p",
+        "author": "div.infos>span:eq(0)",
+        "cover": "div>a>img@attr->src", 
+        "summary": "div.container>div>p",
         "detail": "div.container>div>h2>a@attr->href"
     },
     "detail": {
