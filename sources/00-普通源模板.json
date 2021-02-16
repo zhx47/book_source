@@ -1,0 +1,41 @@
+{
+    "name": "网站名称",
+    "url": "网址",
+    "version": 100,
+    "search": {
+        "url": "@post->${key}",
+        "charset": "utf-8",
+        "list": "搜索列表",
+        "name": "书名",
+        "cover":"封面",
+        "author": "作者",
+        "summary": "简介",
+        "detail":"详情链接"
+    },
+    "detail": {
+        "name":"书名",
+        "cover":"封面",
+        "author":"作者@match->(?<=作者：).+",
+        "status":"状态@match->(?<=状态：).+",
+        "summary":"简介",
+        "update": "更新时间@match->(?<=更新：).+",
+        "lastChapter": "最新章节",
+        "catalog": "目录地址"
+        },
+    "catalog": {
+        "list": "章节或分卷列表",
+        "orderBy":"0",
+        "booklet": {
+            "name": "章节@match->(?<=])(.+)(?=共[0-9]+章)",
+            "list": "章节列表"
+        },
+        "name": "章节标题",
+        "chapter": "章节链接",
+        "page":"分页"
+    },
+    "chapter": {
+        "content": "正文",
+        "page":"分页",
+        "purify": ["屏蔽规则"]
+    }
+}

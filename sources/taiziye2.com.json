@@ -1,0 +1,33 @@
+{
+    "name": "太子爷小说网",
+    "url": "www.taiziye2.com/",
+    "version": 100,
+    "search": {
+        "url": "http://www.taiziye2.com/search.php?keyword=${key}&submit=%CB%D1+%CB%F7",
+        "charset": "gb2312",
+        "list": "div.list>table",
+        "name": "h3>a",
+        "cover":"td.cover>a>img@attr->src",
+        "author": "tr.book>td:eq(2)@match->(?<=上传:).*?(?=  赞（)",
+        "summary": "td.intro",
+        "detail":"td.cover>a@attr->href"
+    },
+    "detail": {
+        "name":"div.xiazai>h1@match->(.+)(?=上传者)",
+        "cover":"div.fm>img@attr->src",
+        "author":"div.xiazai>h1@match->(?<=上传者：)(.+)",
+        "summary":"#jj>p",
+        "update": "div.fm>ul>li:eq(4)"
+    },
+    "catalog": {
+        "list": "div.list-item>ol>li",
+        "name": "a",
+        "chapter": "a@attr->href"
+    },
+    "chapter": {
+        "content": "div.chapter",
+        "purify": ["按键盘上方向.*?本页顶部！",
+            "————未阅读完？加入书签已便下次继续阅读！"
+        ]
+    }
+}
