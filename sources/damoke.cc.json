@@ -28,7 +28,13 @@
     },
     "chapter": {
         "content": "div.contentbox",
-        "filter": ["@strong","@div","@font"],
-        "page": "a.next"
+        "page": "a.next[href*=_]",
+        "filter": ["@strong","@font"],
+        "purify": ["本章有错误，我要提交",
+            "上一章返回目录下一章",
+            "小提示：按.*?进入下一页。",
+            "《.*?仅供娱乐请莫当真。",
+            "\\[ 本章完 \\]"
+        ]
     }
 }
