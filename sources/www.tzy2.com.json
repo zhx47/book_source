@@ -1,9 +1,9 @@
 {
     "name": "太子爷小说网",
-    "url": "www.taiziye2.com/",
+    "url": "www.tzy2.com",
     "version": 100,
     "search": {
-        "url": "http://www.taiziye2.com/search.php?keyword=${key}&submit=%CB%D1+%CB%F7",
+        "url": "http://www.tzy2.com/search.php?keyword=${key}&submit=%CB%D1+%CB%F7",
         "charset": "gb2312",
         "list": "div.list>table",
         "name": "h3>a",
